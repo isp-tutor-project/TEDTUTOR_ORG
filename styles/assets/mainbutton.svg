@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg width="242px" height="295px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+     <style type="text/css"><![CDATA[
+
+        .color1 {
+              fill: #DB7A1A;
+        }
+        .color2 {
+              fill: #0D83B5;
+        }
+        .color3 {
+              fill: #D1D123;
+        }
+        .color4 {
+              fill: #92CA2B;
+        }
+        .color5 {
+              fill: #0B48A6;
+        }
+
+
+        .miterButton {
+              stroke: #222; 
+//            stroke: #0D83B5; 
+//            fill: #6EB7F2;
+//            fill: #0D83B5; 
+//            stroke: #b9dbff;
+            fill-opacity: 1.0;
+            stroke-width: 6;        
+            stroke-miterlimit: 4;
+        }]]></style>
+
+    <filter id="f3" x="0" y="0" width="110%" height="110%">
+      <feOffset result="offOut" in="SourceAlpha" dx="12" dy="15" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
+      <feColorMatrix in="blurOut" result="color-out" type="matrix"
+          values="0 0 0 0   0
+                  0 0 0 0   0 
+                  0 0 0 0   0 
+                  0 0 0 .4  0"/>        
+      <!-- NOTE : using blend clips the image - it seems it is not compensating for the border -->
+      <!--feBlend in="SourceGraphic" in2="color-out" mode="normal" /-->
+    </filter>
+        
+    <filter id="f4" x="0" y="0" width="110%" height="110%">
+      <feOffset result="offOut" in="SourceGraphic" dx="12" dy="15" />
+      <feGaussianBlur in="offOut" result="blurOut" stdDeviation="2" />
+      <feColorMatrix in="blurOut" result="color-out" type="matrix"
+          values=".5 .5 .5 .5  0
+                  .5 .5 .5 .5  0
+                  .9 .9 .9 .9  0 
+                   1  1  1  1  0"/>                
+    </filter>
+      
+  </defs>
+  <g>
+    <!-- This is the shadow - must be identical to the path below - See note in filter -->
+   <path id="mainShadow" class="miterButton" filter="url(#f3)"  d="m19.75442,3.73063c-8.13027,-0.01593 -15.25442,6.22845 -15.03042,13.12238c0.02968,79.1178 -0.05923,158.23925 0.04438,237.35473c0.39045,6.72253 7.33655,13.01245 15.31141,12.68396c61.0537,-0.026 96.22202,0.08899 157.27359,0c0,-21.62207 19.71545,-38.32257 40.58084,-38.32257c-0.02939,-78.92255 0.00601,-133.82482 -0.09801,-212.7456c-0.41206,-6.75208 -7.80046,-12.42352 -15.76305,-12.10205c-60.7729,0.00702 -121.54622,-0.01208 -182.3188,0.00897l0.00004,0.00018l0.00001,0z"/>
+      
+   <path class="miterButton color5" d="m19.75442,3.73063c-8.13027,-0.01593 -15.25442,6.22845 -15.03042,13.12238c0.02968,79.1178 -0.05923,158.23925 0.04438,237.35473c0.39045,6.72253 7.33655,13.01245 15.31141,12.68396c61.0537,-0.026 96.22202,0.08899 157.27359,0c0,-21.62207 19.71545,-38.32257 40.58084,-38.32257c-0.02939,-78.92255 0.00601,-133.82482 -0.09801,-212.7456c-0.41206,-6.75208 -7.80046,-12.42352 -15.76305,-12.10205c-60.7729,0.00702 -121.54622,-0.01208 -182.3188,0.00897l0.00004,0.00018l0.00001,0z"/>
+  </g> 
+</svg>

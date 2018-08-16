@@ -1,0 +1,11 @@
+
+<div class="btn-group radio_margin">    
+    
+  <label class="btn radio_pad btn-primary" ng-model="radioModel" btn-radio="'overview'" ng-click="goToOverview()" >Overview</label>
+  <label class="btn radio_pad btn-primary" ng-model="radioModel" btn-radio="'findings'" ng-click="goToFindings()" >Key Findings</label>
+  <label class="btn radio_pad btn-primary" ng-model="radioModel" btn-radio="'publications'" ng-click="goToPublications()">Publications</label>
+  <label class="btn radio_pad btn-primary" ng-model="radioModel" btn-radio="'researchers'" ng-click="goToResearchers()">Researchers</label>
+
+</div>
+
+<div ui-view class="subFrame  reveal-animation"></div>

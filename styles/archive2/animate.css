@@ -1,0 +1,90 @@
+.view-enteranimate.ng-enter, .view-animate.ng-leave {
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;      
+}
+
+.view-enteranimate.ng-enter {
+    opacity:0.3;
+}
+.view-enteranimate.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+
+
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+    position: absolute;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;      
+  }
+
+  .view-animate.ng-enter {
+    opacity:0;
+  }
+  .view-animate.ng-enter.ng-enter-active {
+    opacity:1;
+  }
+
+  .view-animate.ng-leave {
+    opacity:1;
+  }
+  .view-animate.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+
+
+.reveal-transition.ng-enter {
+ -webkit-transition: 0.5s linear all; /* Safari/Chrome */
+ transition: 0.5s linear all; /* All other modern browsers and IE10+ */
+
+ /* The animation preparation code */
+ opacity: 0;
+}
+
+/*
+ Keep in mind that you want to combine both CSS
+ classes together to avoid any CSS-specificity
+ conflicts
+*/
+.reveal-transition.ng-enter.ng-enter-active {
+ /* The animation code itself */
+ opacity: 1;
+}
+
+
+.lightbox-animation {
+  -webkit-animation: enter_sequence 0.25s linear; /* Safari/Chrome */
+  animation: enter_sequence 0.25s linear; /* IE10+ and Future Browsers */
+}
+
+.reveal-animation.ng-enter {
+  -webkit-animation: enter_sequence 0.5s linear; /* Safari/Chrome */
+  animation: enter_sequence 0.5s linear; /* IE10+ and Future Browsers */
+}
+@-webkit-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.reveal-animation.ng-leavee {
+  -webkit-animation: leave_sequence 0.5s linear; /* Safari/Chrome */
+  animation: leave_sequence 0.5s linear; /* IE10+ and Future Browsers */
+}
+@-webkit-keyframes leave_sequence {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+@keyframes leave_sequence {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+

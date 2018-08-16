@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TED Tutor</title>
+    
+    <script language=JAVASCRIPT type="text/javascript">
+
+      if((location == "http://www.tedtutor.com/") ||
+         (location == "tedtutor.com")) 
+                    location = "http://www.tedtutor.org/";
+
+    </script>
+    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://www.tedtutor.org/styles/animate.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="http://www.tedtutor.org/styles/mainstyle.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <script src="http://www.tedtutor.org/libs/jquery.js" type="application/javascript" ></script>
+    <script src="http://www.tedtutor.org/libs/angular.js" type="application/javascript" ></script>
+    <script src="http://www.tedtutor.org/libs/angular-ui-router.js" type="application/javascript"></script>
+    <script src="http://www.tedtutor.org/libs/angular-animate.js" type="application/javascript"></script>
+    <script src="http://www.tedtutor.org/libs/ui-bootstrap-tpls.js" type="application/javascript"></script>
+
+    <script src="http://www.tedtutor.org/js/ng-ted.js" type="application/javascript" ></script>        
+    <script src="http://www.tedtutor.org/js/main.js" type="application/javascript" ></script>        
+    <script src="http://www.tedtutor.org/js/requirements.js" type="application/javascript" ></script>        
+    <script src="http://www.tedtutor.org/js/standard.js" type="text/javascript"></script>
+    <script src="http://www.tedtutor.org/js/swfobject.js" type="text/javascript" ></script>    
+    <script src="https://www.youtube.com/player_api"></script>
+    
+    <base href="/">
+    
+</head>
+
+    
+<body class="flex" ng-app="tedweb">
+    
+    <div class="header" ng-controller="headerController">
+        <div class="logo" ng-click="goHome()" ><img class="logosize" src="assets/ted_logo.fw.png"></div>
+        <div class="signin">Sign in to your account</div>
+        <div class="goButton" ng-click="goTedTutor()">Go.TEDTutor.org</div> 
+    </div>
+    <div class="menubar"></div>
+
+    <div ui-view class="content reveal-animation"></div>    
+
+    <div class="footer">
+        <div class='upper_left_corner'>
+            <div class='concave_bite'></div>
+        </div>
+        <div class="icon"><img src="assets/nsfFooter.png" alt="NSF"></div>
+        <div class="icon"><img src="assets/iesFooter.png" alt="IES"></div>
+        <div class="icon"><img src="assets/klahrLabFooter.png" alt="KlahrLab - Carnegie Mellon"></div>
+
+        <div class="copyright"></div>
+    </div>
+    <div class="status"></div>
+    
+</body>
+
+</html>
